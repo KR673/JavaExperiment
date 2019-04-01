@@ -13,7 +13,7 @@ import java.util.stream.Collectors;
  * @Version: 1.0
  */
 @Component
-public class RumTest {
+public class RunTest {
 
     @RunTime
     public void foreachTest(){

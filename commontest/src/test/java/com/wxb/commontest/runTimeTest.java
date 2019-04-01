@@ -1,11 +1,11 @@
 package com.wxb.commontest;
 
-import com.wxb.commontest.annotationTest.RumTest;
+import com.wxb.commontest.annotationTest.RunTest;
 import org.junit.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 
 /**
- * @Description: 作用描述
+ * @Description: 自定义注解
  * @Author: WangXiaoBo
  * @Date: 2019/2/12 10:55
  * @Version: 1.0
@@ -13,17 +13,17 @@ import org.springframework.beans.factory.annotation.Autowired;
 public class runTimeTest extends CommontestApplicationTests{
 
     @Autowired
-    private RumTest rumTest;
+    private RunTest runTest;
 
     @Test
-    public void abc() {
+    public void testWithICO() {
 
-        rumTest.foreachTest();
+        runTest.foreachTest();
     }
 
     @Test
-    public void test2(){
-        RumTest rumTest1 = new RumTest();
-        rumTest1.foreachTest();
+    public void testWithNew(){
+        RunTest runTest1 = new RunTest();
+        runTest1.foreachTest();
     }
 }
