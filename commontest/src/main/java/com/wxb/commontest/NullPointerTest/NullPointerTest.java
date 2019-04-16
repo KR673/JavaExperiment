@@ -1,6 +1,7 @@
 package com.wxb.commontest.NullPointerTest;
 
 import java.util.HashMap;
+import java.util.Objects;
 
 /**
  * @Description: 作用描述
@@ -28,5 +29,10 @@ public class NullPointerTest {
     //tostring
     public void toStringTest(Integer number){
         number.toString();
+    }
+
+    public static void main(String[] args) {
+        Integer aa = 1;
+        System.out.println(Objects.equals(1, aa));
     }
 }
