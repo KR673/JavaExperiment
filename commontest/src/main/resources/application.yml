@@ -1,0 +1,10 @@
+server:
+  port: 8070
+  tomcat:
+    maxThreads: 0
+    uriEncoding: UTF-8
+    basedir: target/tomcat
+  servlet:
+    contextPath: /
+    session:
+      timeout: -1s

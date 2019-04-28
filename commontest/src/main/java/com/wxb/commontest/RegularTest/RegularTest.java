@@ -1,5 +1,9 @@
 package com.wxb.commontest.RegularTest;
 
+import org.springframework.context.ApplicationListener;
+
+import java.util.Arrays;
+import java.util.Spliterator;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
@@ -12,20 +16,10 @@ import java.util.regex.Pattern;
 public class RegularTest {
     public static void main(String[] args) {
 
-        String time = "22:22:00";
-        String[] split = time.split(":");
-        String i = Integer.valueOf(split[0]) * 60 + Integer.valueOf(split[1]).toString();
-
-        String testString = "LiMit";
-
-        System.out.println(testString.replaceAll("(?i)limit", "23"));
-
-//        Arrays.stream(regualr.split(" ?世界 我的* ")).forEach(System.out::println);
-
-        String date = "94/12/12";
-        System.out.println(date.replaceAll("(\\d{4}|\\d{2})\\.(\\d{2})\\.(\\d{2})", "$1-$2-$3"));
-
+        splitTest();
     }
+
+
 
     /**
      * @Description: 日期单数补零
@@ -37,7 +31,19 @@ public class RegularTest {
 
         Pattern regualr = Pattern.compile("-(\\d)(?!\\d)");
         Matcher matcher =  regualr.matcher("1994-12-1");
+
         System.out.println(matcher.replaceAll("-0$1"));
+    }
+    /**
+     * @Description: split
+     * @Author WangXiaoBo
+     * @Param
+     * @return
+     */
+    private static void splitTest(){
+
+            System.out.println("aabbcc".matches("a{2}b{2}c{2}"));
+
     }
 
 }
