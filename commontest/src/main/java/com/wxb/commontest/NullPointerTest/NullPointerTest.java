@@ -11,6 +11,11 @@ import java.util.Objects;
  */
 public class NullPointerTest {
 
+    public static void main(String[] args) {
+        String number = null;
+        System.out.println(Integer.valueOf(number));
+    }
+
     //valueOf
     public void valueOf(Integer number){
         System.out.println(String.valueOf(number));
@@ -31,8 +36,4 @@ public class NullPointerTest {
         number.toString();
     }
 
-    public static void main(String[] args) {
-        Integer aa = 1;
-        System.out.println(Objects.equals(1, aa));
-    }
 }

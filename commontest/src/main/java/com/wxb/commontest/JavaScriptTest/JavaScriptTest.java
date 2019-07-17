@@ -20,8 +20,7 @@ public class JavaScriptTest {
 
 //        System.out.println(test = test.replaceAll("(\\d\\.?\\d{1})(\\%)", "$1/100"));
         System.out.println(test = test.replaceAll("\\%", "/100"));
-//        System.out.println(scriptEngine.eval(test.replaceAll("[x]", "3.2")));
-        //System.out.println(scriptEngine.eval(test));
+        System.out.println(scriptEngine.eval(test.replaceAll("[x]", "3.2")));
     }
 
 }
