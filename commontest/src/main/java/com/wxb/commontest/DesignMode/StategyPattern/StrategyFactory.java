@@ -11,13 +11,12 @@ import java.util.Map;
  */
 public class StrategyFactory {
 
-    private static Map<MemberEnum, MusicDownload> map = new HashMap<>();
-    private static StrategyFactory factory = new StrategyFactory();
-
-    {
+    private static Map<MemberEnum, MusicDownload> map = new HashMap<>(){{
         map.put(MemberEnum.MEMBER, new MusicDownloadMember());
         map.put(MemberEnum.NOT_MEMBER, new MusicDownloadNotMember());
-    }
+    }};
+    private static StrategyFactory factory = new StrategyFactory();
+
 
     public static StrategyFactory factory(){
         return factory;
