@@ -5,6 +5,7 @@ import lombok.Data;
 import org.hibernate.validator.constraints.Range;
 
 import javax.validation.constraints.NotNull;
+import java.util.Optional;
 
 /**
  * @Description: 作用描述
@@ -14,30 +15,9 @@ import javax.validation.constraints.NotNull;
  */
 @Data
 public class Param {
-
-    @NotNull
-    private String name;
-
-    @Range(max = 100, message = "age小于100")
-    private Integer age;
-
-    private static String address = "hn";
-
-    public Param() {}
-
-    public void setNaame(String name) {
-        this.name = name;
-    }
-
-    public void setAge(Integer age) {
-        this.age = age;
-    }
-
-    public String getName() {
-        return name;
-    }
-
-    public Integer getAge() {
-        return age;
+    public static void main(String[] args) {
+        System.out.println(Optional.ofNullable("2339879879")
+                .map(t -> t.replaceAll("([0-9]{3})([0-9]{4})([0-9]*)", "$1****$3"))
+                .orElse(""));
     }
 }
