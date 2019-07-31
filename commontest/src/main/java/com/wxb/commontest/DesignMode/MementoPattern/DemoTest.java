@@ -14,6 +14,10 @@ public class DemoTest {
         SteamName steamName = new SteamName("1");
         mementoCaretaker.addMemento(steamName.save());
         SteamName steamName1 = new SteamName("2");
+        mementoCaretaker.addMemento(steamName1.save());
 
+        //恢复
+        steamName1.restore(mementoCaretaker.getMemento(0));
+        System.out.println(steamName1.getName());
     }
 }
