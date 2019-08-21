@@ -1,7 +1,5 @@
 package com.wxb.commontest;
 
-import com.wxb.commontest.annotationTest.RunInterface;
-import com.wxb.commontest.annotationTest.RunTest;
 import org.junit.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 
@@ -13,7 +11,7 @@ import org.springframework.beans.factory.annotation.Autowired;
  */
 public class runTimeTest extends CommontestApplicationTests{
 
-    @Autowired
+    /*@Autowired
     private RunTest runTest;
 
     @Autowired
@@ -35,5 +33,5 @@ public class runTimeTest extends CommontestApplicationTests{
     public void runInterfaceTest(){
         runInterface.foreach();
         //注解在接口中不能继承
-    }
+    }*/
 }
