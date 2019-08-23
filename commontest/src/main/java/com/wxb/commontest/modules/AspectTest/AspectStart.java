@@ -16,8 +16,6 @@ public class AspectStart implements InvocationHandler {
 
     private Objects source;
 
-
-
     @Override
     public Object invoke(Object o, Method method, Object[] objects) throws Throwable {
 
@@ -26,6 +24,5 @@ public class AspectStart implements InvocationHandler {
 
         return null;
     }
-
 
 }

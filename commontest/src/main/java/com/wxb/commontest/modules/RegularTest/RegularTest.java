@@ -15,8 +15,6 @@ public class RegularTest {
         splitTest();
     }
 
-
-
     /**
      * @Description: 日期单数补零
      * @Author WangXiaoBo

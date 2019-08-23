@@ -1,4 +1,4 @@
-package com.wxb.commontest.modules;
+package com.wxb.commontest.modules.ReflectTest;
 
 import lombok.Data;
 

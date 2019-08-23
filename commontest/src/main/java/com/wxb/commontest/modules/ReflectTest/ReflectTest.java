@@ -1,4 +1,4 @@
-package com.wxb.commontest.modules;
+package com.wxb.commontest.modules.ReflectTest;
 
 import java.lang.reflect.Field;
 import java.util.Arrays;
@@ -24,7 +24,5 @@ public class ReflectTest {
             a.setAccessible(true);
             System.out.println(a.get(banZhuRenParam));
         }
-
-
     }
 }

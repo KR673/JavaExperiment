@@ -1,4 +1,4 @@
-package com.wxb.commontest.modules;
+package com.wxb.commontest.modules.StreamTest;
 
 
 import lombok.Data;
@@ -11,13 +11,13 @@ import java.util.stream.Collectors;
 
 
 /**
- * @Description: 作用描述
+ * @Description: stream groupingBy 使用
  * @Author: WangXiaoBo
  * @Date: 2019/5/22 11:21
  * @Version: 1.0
  */
 
-public class CodeUtil {
+public class StreamGroupingByTest {
 
     public static void main(String[] args) throws InterruptedException {
 
@@ -39,6 +39,8 @@ public class CodeUtil {
                 .collect(Collectors.groupingBy(ParamL::getAge,
                         Collectors.groupingBy(ParamL::getName,
                                 Collectors.groupingBy(ParamL::getAaa))));
+
+
         List<Integer> collect1 = collect.entrySet()
                 .stream()
                 .map(t -> t.getKey())

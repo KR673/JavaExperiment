@@ -80,9 +80,9 @@ public class HttpClientUtils {
 			}
 			respEntity = response.getEntity();
 			result = null != respEntity ? EntityUtils.toString(respEntity, DEF_CHARSET) : null;
-			logger.info("HTTP url={},header={}, com.wxb.commontest.modules.param={}, response =  {}", url, header, urlParam, result);
+			logger.info("HTTP url={},header={}, com.wxb.commontest.modules.LatchLockTest.param={}, response =  {}", url, header, urlParam, result);
 		} catch (IOException e) {
-			logger.error("com.wxb.commontest.modules.HttpClientUtils post url = {}, com.wxb.commontest.modules.param ={}, header = {}, exception:", url, header, urlParam, e);
+			logger.error("com.wxb.commontest.modules.HttpClientUtils post url = {}, com.wxb.commontest.modules.LatchLockTest.param ={}, header = {}, exception:", url, header, urlParam, e);
 		} finally {
 			try {
 				httpclient.close();
@@ -135,11 +135,11 @@ public class HttpClientUtils {
 			}
 			respEntity = response.getEntity();
 			result = null != respEntity ? EntityUtils.toString(respEntity, DEF_CHARSET) : null;
-			logger.info("HTTP post url = {}, header = {}, com.wxb.commontest.modules.param={}, body = {}, response = {}", url, header, urlParam, body,
+			logger.info("HTTP post url = {}, header = {}, com.wxb.commontest.modules.LatchLockTest.param={}, body = {}, response = {}", url, header, urlParam, body,
 					result);
 			logger.info(MarkerFactory.getMarker("addDB"),"http Post url={}, date={},body= {},result={}", url, new Date(), body, result);
 		} catch (IOException e) {
-			logger.error("com.wxb.commontest.modules.HttpClientUtils post url = {},header = {}, body = {}, com.wxb.commontest.modules.param = {} , exception:", url, header,
+			logger.error("com.wxb.commontest.modules.HttpClientUtils post url = {},header = {}, body = {}, com.wxb.commontest.modules.LatchLockTest.param = {} , exception:", url, header,
 					body, urlParam, e);
 		} finally {
 			try {

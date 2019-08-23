@@ -1,4 +1,4 @@
-package com.wxb.commontest.modules.FunctionTest;
+package com.wxb.commontest.modules.LambdaTeat;
 
 import java.util.function.Function;
 

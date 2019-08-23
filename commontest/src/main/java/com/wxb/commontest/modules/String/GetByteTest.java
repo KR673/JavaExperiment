@@ -3,7 +3,7 @@ package com.wxb.commontest.modules.String;
 import java.io.UnsupportedEncodingException;
 
 /**
- * @Description: 作用描述
+ * @Description: 获取编码
  * @Author: WangXiaoBo
  * @Date: 2019/4/27 16:30
  * @Version: 1.0

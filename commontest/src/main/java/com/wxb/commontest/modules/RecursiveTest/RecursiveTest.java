@@ -1,4 +1,4 @@
-package com.wxb.commontest.modules.RecursionTest;
+package com.wxb.commontest.modules.RecursiveTest;
 
 /**
  * @Description: 作用描述
@@ -6,7 +6,7 @@ package com.wxb.commontest.modules.RecursionTest;
  * @Date: 2019/2/15 10:52
  * @Version: 1.0
  */
-public class RecursionTest {
+public class RecursiveTest {
 
     public static void main(String[] args) {
         System.out.println(multiplyTenTimes(10, 10));

@@ -1,6 +1,7 @@
-package com.wxb.commontest.modules;
+package com.wxb.commontest.modules.LatchLockTest;
 
 import com.alibaba.fastjson.JSON;
+import com.wxb.commontest.modules.HttpClientUtils;
 import lombok.Data;
 
 import java.util.concurrent.CountDownLatch;
