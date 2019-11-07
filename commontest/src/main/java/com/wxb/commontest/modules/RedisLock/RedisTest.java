@@ -11,7 +11,7 @@ import org.springframework.stereotype.Component;
  * @Version: 1.0
  */
 @Component
-public class redisTest {
+public class RedisTest {
 
     @Autowired
     private RedisUtils redisUtils;

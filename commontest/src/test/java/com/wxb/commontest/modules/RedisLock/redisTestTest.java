@@ -6,7 +6,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 public class redisTestTest extends CommontestApplicationTests {
 
     @Autowired
-    private redisTest redisTest;
+    private RedisTest redisTest;
 
     @Test
     public void redisTest(){
