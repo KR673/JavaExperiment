@@ -12,4 +12,5 @@ public abstract class Component {
     public abstract void remover(Component component);
     public abstract void print();
     public abstract String getContent();
+
 }

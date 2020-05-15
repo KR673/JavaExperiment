@@ -1,6 +1,10 @@
 package com.wxb.commontest.modules.LambdaTeat;
 
+import javax.validation.constraints.Max;
+import java.util.ArrayList;
+import java.util.List;
 import java.util.function.Function;
+import java.util.stream.Collectors;
 
 /**
  * @Description: 作用描述
@@ -11,9 +15,14 @@ import java.util.function.Function;
 public class FunctionTest {
 
     public static void main(String[] args) {
-        Function<String , String> abc = a -> a + "11";
 
-        System.out.println(abc.apply("34"));
+        List<Integer> objects = new ArrayList<>() {{
+            add(1);
+            add(2);
+        }};
+
+        List<Integer> collect = objects.stream().map(t -> t + 1).collect(Collectors.toList());
+        System.out.println(collect);
 
     }
 

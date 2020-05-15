@@ -1,12 +1,15 @@
 package com.wxb.commontest.modules.NullPointerTest;
 
-import org.junit.Test;
+
+import org.junit.jupiter.api.Test;
 
 public class NullPointerTestTest {
 
     @Test
     public void valueOf() {
-        new NullPointerTest().valueOf(null);
+
+
+
     }
 
     @Test

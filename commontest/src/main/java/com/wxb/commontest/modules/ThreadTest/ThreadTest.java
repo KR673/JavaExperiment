@@ -1,8 +1,18 @@
 package com.wxb.commontest.modules.ThreadTest;
 
 
+import ch.qos.logback.core.util.TimeUtil;
+import lombok.SneakyThrows;
+import org.aspectj.weaver.ast.Var;
+import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
+import org.springframework.security.crypto.password.PasswordEncoder;
+import org.springframework.security.crypto.password.StandardPasswordEncoder;
+
+import java.io.*;
 import java.util.concurrent.CountDownLatch;
 import java.util.concurrent.CyclicBarrier;
+import java.util.concurrent.TimeUnit;
+import java.util.concurrent.locks.Lock;
 
 /**
  * @Description: 并发编程以及synchronized关键字的使用
@@ -12,52 +22,22 @@ import java.util.concurrent.CyclicBarrier;
  */
 public class ThreadTest {
 
-    private static CountDownLatch startLatch = new CountDownLatch(10);
-    private static CyclicBarrier cyclicBarrier = new CyclicBarrier(10);
-    public static void main(String[] args) throws InterruptedException {
+    //从配置文件中获得
+    private static final String SITE_WIDE_SECRET = "admin";
+    private static final PasswordEncoder encoder = new BCryptPasswordEncoder(
+);
 
-        //FutureTask<Object> task = new FutureTask<>(() -> {String abc = "";System.out.println("jjj"); return null;});
+    public static String encrypt(String rawPassword) {
+        return encoder.encode(rawPassword);
+    }
 
-        Runnable runnable = new MyRunnable();
-//        Runnable runnable2 = new MyRunnable(); //如果new两个MyRunnable对象使用thread调用, 则synchronized关键字不起作用, 因为synchronized锁定的是一个对象
+    public static boolean match(String rawPassword, String password) {
+        return encoder.matches(rawPassword, password);
+    }
 
-        long begin = System.currentTimeMillis();
-        new Thread(runnable, "A").start();
-
-        long end = System.currentTimeMillis();
-
-        System.out.println(end - begin);
-
-        for (int i =1 ; i <= 10 ; i++){
-            new Thread(() -> {
-                System.out.println(Thread.currentThread().getName());}).start();
-        }
-        startLatch.await();
-        System.out.println("结束");
-
-        //new Thread(runnable, "B").start();
-//        try {
-//            System.out.println(task.get());
-//        } catch (InterruptedException e) {
-//            e.printStackTrace();
-//        } catch (ExecutionException e) {
-//            e.printStackTrace();
-//        }
+    public static void main(String[] args) {
+        System.out.println(encrypt("admin"));
+        //但是把每次结果拿出来进行match，你会发现可以得到true。
     }
 }
 
-
-class MyRunnable implements Runnable {
-
-    @Override
-    public void run() {
-
-        for (int i = 0; i < 10; i++) {
-            for (long j = 0; j < 2000000000; j++) {
-                j += 1;
-                j *= 3;
-            }
-        }
-        System.out.println(12);
-    }
-}

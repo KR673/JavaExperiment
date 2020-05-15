@@ -1,4 +1,4 @@
-package com.wxb.commontest.modules;
+package com.wxb.commontest.util;
 
 import org.apache.http.Header;
 import org.apache.http.HttpEntity;
@@ -29,7 +29,7 @@ import java.util.List;
 import java.util.Map;
 
 /**
- * 
+ *
  * 使用HttpComponents组件发起http请求。
  * @author jiaweicheng
  */

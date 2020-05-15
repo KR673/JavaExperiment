@@ -1,4 +1,4 @@
-package com.wxb.commontest.modules.ThreadLocalTest;
+package com.wxb.commontest.modules.ThreadTest;
 
 /**
  * @Description: 作用描述

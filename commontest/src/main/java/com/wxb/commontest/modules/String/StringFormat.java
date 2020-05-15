@@ -1,4 +1,4 @@
-package com.wxb.commontest.modules.StringFormat;
+package com.wxb.commontest.modules.String;
 
 /**
  * @Description: 作用描述

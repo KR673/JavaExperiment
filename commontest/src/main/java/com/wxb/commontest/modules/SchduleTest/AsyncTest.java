@@ -12,7 +12,7 @@ import org.springframework.stereotype.Component;
  * @Date: 2019/5/23 9:32
  * @Version: 1.0
  */
-@EnableScheduling
+//@EnableScheduling
 @Component
 @EnableAsync
 public class AsyncTest {
