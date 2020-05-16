@@ -17,6 +17,7 @@ import org.springframework.stereotype.Component;
 @EnableAsync
 public class AsyncTest {
 
+/*
     @Async
     @Scheduled(cron = "0/5 * * * * ?")
     public void configureTasks() throws InterruptedException {
@@ -31,5 +32,6 @@ public class AsyncTest {
 
         System.err.println("执行静态定时任务时间: " + "1s");
     }
+*/
 
 }

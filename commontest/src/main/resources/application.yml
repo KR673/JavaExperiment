@@ -10,7 +10,7 @@ server:
       timeout: -1s
 redis:
   open: on  # 是否开启redis缓存  true开启   false关闭
-  database: 1
+  database: 0
   host: 127.0.0.1
   port: 6379
   password:    # 密码（默认为空）
@@ -38,3 +38,11 @@ spring:
     enabled: true
     max-connections: 10   #连接池最大连接数
     idle-timeout: 30000   #空闲的连接过期时间，默认为30秒
+  rabbitmq:
+    host: 127.0.0.1
+    port: 15672
+    username: guest
+    password: guest
+    publisher-confirms: true
+    virtual-host: /
+    connection-timeout: 5
