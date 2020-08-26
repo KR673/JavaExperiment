@@ -25,12 +25,12 @@ public class ThreadLocalTest {
 
     public static void numberAdd() throws InterruptedException {
         if(status == 1){
-            System.out.println("其他线程正在执行");
+            System.err.println("其他线程正在执行");
             return;
         }
         status = 1;
 
-        System.out.println(Thread.currentThread().getName() + ": 正在执行");
+        System.err.println(Thread.currentThread().getName() + ": 正在执行");
         Thread.sleep(10);
         status = 0;
     }

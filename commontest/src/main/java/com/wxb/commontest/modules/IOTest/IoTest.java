@@ -1,6 +1,7 @@
 package com.wxb.commontest.modules.IOTest;
 
 import java.io.*;
+import java.util.ArrayList;
 
 /**
  * @Description: 作用描述
@@ -10,11 +11,13 @@ import java.io.*;
  */
 public class IoTest {
 
+    static String aaaPath = "C:\\Users\\lenovo\\Desktop\\aaa.txt";
+
     public static void main(String[] args) throws IOException {
 
-        File file = new File("C:\\Users\\Administrator\\Desktop\\aaa.txt");
+        File file = new File(aaaPath);
         FileInputStream fileInputStream = new FileInputStream(file);
-
+        ArrayList<Object> aa = new ArrayList<>();
         InputStreamReader gb2312 = new InputStreamReader(fileInputStream, "GB2312");
         BufferedReader bufferedReader = new BufferedReader(gb2312);
 

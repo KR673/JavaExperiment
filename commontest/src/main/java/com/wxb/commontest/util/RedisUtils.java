@@ -323,4 +323,5 @@ public class RedisUtils {
     public Map<Object,Object> hmgetIndex(String key){
             return initRedisTemplate.opsForHash().entries(key);
     }
+
 }

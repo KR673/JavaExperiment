@@ -1,6 +1,5 @@
 package com.wxb.commontest.modules.SerializableTest;
 
-import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.ObjectOutputStream;

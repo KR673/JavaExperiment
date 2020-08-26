@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE generatorConfiguration
+        PUBLIC "-//mybatis.org//DTD MyBatis Generator Configuration 1.0//EN"
+        "http://mybatis.org/dtd/mybatis-generator-config_1_0.dtd">
+<generatorConfiguration>
+
+
+    <context id="mysql"  targetRuntime="MyBatis3Simple" defaultModelType="flat">
+        <!--tkMapper的插件-->
+    <!--    <plugin type="tk.mybatis.mapper.generator.MapperPlugin">-->
+    <!--    <property name="mappers" value="com.zhongyewx.msg_push.util.MyMapper"/>-->
+    <!--    </plugin>-->
+
+        <jdbcConnection driverClass="com.mysql.jdbc.Driver"
+        connectionURL="jdbc:mysql://localhost:3306/test?useUnicode=true&amp;useSSL=false&amp;autoReconnect=true" userId="root" password="123456">
+        </jdbcConnection>
+        <javaTypeResolver>
+            <property name="forceBigDecimals" value="false"/>
+        </javaTypeResolver>
+
+        <javaModelGenerator targetPackage="com.wxb.commontest.dao.mysql" targetProject="src/main/java">
+            <property name="enableSubPackages" value="true"/>
+            <property name="trimStrings" value="true"/>
+        </javaModelGenerator>
+
+        <sqlMapGenerator targetPackage="mapper/mysql" targetProject="src/main/resources">
+            <property name="enableSubPackages" value="true"/>
+        </sqlMapGenerator>
+
+        <javaClientGenerator type="XMLMAPPER" targetPackage="com.wxb.commontest.dao.mysql" targetProject="src/main/java">
+            <property name="enableSubPackages" value="true"/>
+        </javaClientGenerator>
+
+        <table tableName="month" domainObjectName="Month" >
+            <property name="useActualColumnNames" value="true" />
+            <!--oracle使用sequence, identity的值需要设置成false-->
+            <generatedKey column="TableId" sqlStatement="SqlServer" identity="true" />
+        </table>
+    </context>
+
+</generatorConfiguration>

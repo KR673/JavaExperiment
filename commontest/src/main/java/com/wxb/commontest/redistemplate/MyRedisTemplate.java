@@ -5,12 +5,8 @@ import org.springframework.data.redis.connection.lettuce.LettuceConnectionFactor
 import org.springframework.data.redis.core.StringRedisTemplate;
 
 public class MyRedisTemplate extends StringRedisTemplate {
-    public static ThreadLocal<Integer> REDIS_DB_INDEX = new ThreadLocal<Integer>(){
-        @Override
-        protected Integer initialValue() {
-            return 1;
-        }
-    };
+
+    public static ThreadLocal<Integer> REDIS_DB_INDEX = ThreadLocal.withInitial(() -> 1);
 
     @Override
     protected RedisConnection preProcessConnection(RedisConnection connection, boolean existingConnection) {

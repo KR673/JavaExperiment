@@ -1,11 +1,9 @@
 package com.wxb.commontest.modules.LambdaTeat;
 
 import lombok.Data;
-import org.springframework.boot.autoconfigure.security.SecurityProperties;
 
 import java.util.ArrayList;
 import java.util.List;
-import java.util.Map;
 import java.util.stream.Collectors;
 
 /**

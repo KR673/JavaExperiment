@@ -1,19 +1,14 @@
-package com.wxb.commontest.modules.ThreadLocalTest;
+package com.wxb.commontest.modules.ThreadTest;
 
 import com.alibaba.fastjson.JSON;
-import org.apache.logging.log4j.ThreadContext;
-import org.springframework.util.CollectionUtils;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import javax.xml.transform.Source;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
-import java.util.concurrent.CountDownLatch;
-import java.util.concurrent.locks.Lock;
 
 /**
  * @Description: 作用描述

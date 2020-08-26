@@ -1,6 +1,5 @@
 package com.wxb.commontest.modules.ConsoleShow;
 
-import java.io.CharConversionException;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.stream.Collectors;
