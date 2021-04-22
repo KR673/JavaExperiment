@@ -28,7 +28,7 @@
         <fastjson.version>1.2.62</fastjson.version>
         <javax.jms-api>2.0.1</javax.jms-api>
         <mybatis.version>1.3.2</mybatis.version>
-        <shiro.version>1.4.0</shiro.version>
+        <shiro.version>1.7.0</shiro.version>
         <activiti.version>6.0.0</activiti.version>
     </properties>
 
